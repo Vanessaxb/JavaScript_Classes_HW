@@ -10,7 +10,7 @@ class Cat {
         console.log(this.sound)
     }
 
-    catInfo() { //! HTMLTemplateElement. Why doesnt print right? Copied from Slide
+    catInfo() {
         // return  this.breed + ' is ' + this.color +' and ' + this.age + ' years old '; //needs a catcher
         console.log(this.breed + ' is ' + this.color +' and ' + this.age + ' years old');        
     }
