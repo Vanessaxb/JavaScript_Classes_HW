@@ -9,26 +9,39 @@ class Cat {
     talk() {
         console.log(this.sound)
     }
-    catInfo() {
-        return 'Cat ('+ this.breed + ') is ' + this.color +' and this.age old';
-            }
-    isABlackCat() {
+
+    catInfo() { //! HTMLTemplateElement. Why doesnt print right? Copied from Slide
+        // return  this.breed + ' is ' + this.color +' and ' + this.age + ' years old '; //needs a catcher
+        console.log(this.breed + ' is ' + this.color +' and ' + this.age + ' years old');        
+    }
+
+    isABlackCat(color) {
+        if(this.color == 'black') {
+        console.log('It\'s a black cat');
+    } else {
+        console.log('It\'s NOT a black cat');
+    }
 
     }
     
 }
 
-const black = new Cat('Samp', 'Black', '7');
-const orange = new Cat('Vira', 'Orange', '2');
+const black = new Cat('Samp', 'black', '7');
+const orange = new Cat('Vira', 'orange', '2');
+// const white = new Cat('Siam', 'white', '10')
 
 console.log(orange);
 console.log(black);
 
 orange.talk()
-black.catInfo() // why is not returning anything?
-const catDetails = orange.catInfo(); //return needs a catcher
-console.log(orange.catInfo);
-console.log(catDetails);
+black.talk()
+orange.isABlackCat()
+black.isABlackCat()
+black.catInfo() 
+orange.catInfo()
+// const catDetails = orange.catInfo(); //return needs a catcher
+// console.log(orange.catInfo);
+// console.log(catDetails);
 
 
 //*Constructor
